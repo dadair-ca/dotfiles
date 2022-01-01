@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -ue
+
+eval "$(op signin my)" && op get item $1 --fields password | xclip -selection clipboard
+echo "Password for \"$1\" copied to clipboard."

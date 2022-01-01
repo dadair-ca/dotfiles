@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -ue
+
+name=$1
+
+tee "$name-$(date "+%F-%H-%M-%S").log" < /dev/stdin
