@@ -1,0 +1,26 @@
+This repository contains my personal system configuration.
+
+It is pretty bare at the moment, but I plan to migrate my ad-hoc configuration to it over time.
+#+begin_quote
+*NOTE*: My emacs configuration is in [[https://github.com/dadair-ca/.emacs.d][its own repository]]
+#+end_quote
+
+** Getting Started
+#+begin_quote
+*NOTE*: assumes a [[https://getfedora.org/][Fedora]] operating system, and the XDG configuration specification
+#+end_quote
+
+These dotfiles are managed using the [[https://www.gnu.org/software/stow/][GNU Stow]] utility, which needs to be installed on the system:
+#+begin_src sh
+sudo dnf install stow
+#+end_src
+
+Once ~stow~ is installed, clone this repository into ~$HOME/.dotfiles~:
+#+begin_src sh
+git clone git@github.com:dadair-ca/dotfiles.git $HOME/.dotfiles
+#+end_src
+
+Finally, simply ~stow~ the dotfiles to install them:
+#+begin_src sh
+stow $HOME/.dotfiles
+#+end_src
