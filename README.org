@@ -20,7 +20,8 @@ Once ~stow~ is installed, clone this repository into ~$HOME/.dotfiles~:
 git clone git@github.com:dadair-ca/dotfiles.git $HOME/.dotfiles
 #+end_src
 
-Finally, simply ~stow~ the dotfiles to install them:
+Since these are my personal dotfiles, it's assumed everything should be installed/stowed.
+The directory structure of this repository reflects that assumption, and so these dotfiles can be installed simply by stowing from the root of the directory:
 #+begin_src sh
 stow $HOME/.dotfiles
 #+end_src
