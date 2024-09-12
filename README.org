@@ -6,13 +6,22 @@ It is pretty bare at the moment, but I plan to migrate my ad-hoc configuration t
 #+end_quote
 
 ** Getting Started
+These dotfiles are managed using the [[https://www.gnu.org/software/stow/][GNU Stow]] utility, which needs to be installed on the system:
+
 #+begin_quote
-*NOTE*: assumes a [[https://getfedora.org/][Fedora]] operating system, and the XDG configuration specification
+*NOTE*: If using a [[https://getfedora.org/][Fedora]] operating system, and the XDG configuration specification:
 #+end_quote
 
-These dotfiles are managed using the [[https://www.gnu.org/software/stow/][GNU Stow]] utility, which needs to be installed on the system:
 #+begin_src sh
 sudo dnf install stow
+#+end_src
+
+#+begin_quote
+*NOTE*: If using a Mac operating system, and the XDG configuration specification:
+#+end_quote
+
+#+begin_src sh
+sudo brew install stow
 #+end_src
 
 Once ~stow~ is installed, clone this repository into ~$HOME/.dotfiles~:
@@ -23,5 +32,6 @@ git clone git@github.com:dadair-ca/dotfiles.git $HOME/.dotfiles
 Since these are my personal dotfiles, it's assumed everything should be installed/stowed.
 The directory structure of this repository reflects that assumption, and so these dotfiles can be installed simply by stowing from the root of the directory:
 #+begin_src sh
-stow $HOME/.dotfiles
+cd $HOME/.dotfiles
+stow .
 #+end_src
